@@ -1,0 +1,12 @@
+.Favorite {
+  flex: 1;
+  padding: 0 30px 30px;
+  background-color: var(--color-card);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.Favorite button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

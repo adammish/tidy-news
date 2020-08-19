@@ -1,0 +1,19 @@
+.Nav {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .Nav {
+    margin-right: 20px;
+  }
+}
+
+.NavImgToggle {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.NavImgToggle label {
+  margin-left: 10px;
+}

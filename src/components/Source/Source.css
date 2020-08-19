@@ -1,0 +1,19 @@
+.Source {
+  display: flex;
+  margin: 30px 0;
+}
+
+@media (max-width: 575.99px) {
+  .Source {
+    flex-direction: column;
+  }
+
+  .Source button {
+    margin-top: 10px;
+  }
+}
+
+.Source h1 {
+  margin: 0;
+  margin-right: 20px;
+}
