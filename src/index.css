@@ -1,18 +1,18 @@
 :root {
-  --color-background: #212529;
-  --color-card: #2a2e32;
-  --color-default: white;
-  --color-primary: #fd413c;
+  --color-background: white;
+  --color-card: #f7f7f7;
+  --color-default: black;
+  --color-primary: #007ed6;
   --color-light: #9f9f9f;
   --color-medium: #4e5358;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --color-background: white;
-    --color-card: #f7f7f7;
-    --color-default: black;
-    --color-primary: #007ed6;
+    --color-background: #212529;
+    --color-card: #2a2e32;
+    --color-default: white;
+    --color-primary: #fd413c;
   }
 }
 
