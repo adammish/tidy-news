@@ -38,3 +38,8 @@ _Note: Due to recent changes in the [News API](https://newsapi.org/)'s free tier
 If you have a paid [News API](https://newsapi.org/) account and want to deploy __tidy news__ to a domain, running `npm run build` or `yarn build` will build the app for production to the `build` folder.
 
 This correctly bundles __tidy news__ in production mode and optimizes the build for the best performance.
+
+
+## License
+
+__tidy news__ is open source software [licensed as MIT](https://github.com/adammish/tidy-news/blob/master/LICENSE).
