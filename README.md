@@ -4,7 +4,7 @@ Put the news back in its proper place.
 
 ## Overview
 
-__tidy news__ is a React SPA that allows you to access the top news stories from over 100 sources in one place, so you can get the news you need and then get on with your life.
+__tidy news__ is a React SPA that allows you to access the top news stories from over 100 sources in one place. Get the news you need and then get on with your life.
 
 <p align='center'>
 <img src='public/light-mode.png' width='48%' alt='Light mode'>
@@ -26,7 +26,7 @@ _Note: Due to recent changes in the [News API](https://newsapi.org/)'s free tier
 ## To use locally
 
 1. Clone repo, and `cd tidy-news`
-2. Run `npm i`
+2. Run `npm i` or `yarn`
 3. Run `cp .env.example .env`
 4. Go to https://newsapi.org/register and sign up for a free api key
 5. Add your api key to your new `.env` file
