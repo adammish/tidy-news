@@ -33,8 +33,6 @@ _Note: Due to recent changes in the [News API](https://newsapi.org/)'s free tier
 6. Run `npm start` or `yarn start`
 7. Open [http://localhost:3000/](http://localhost:3000/) to see __tidy news__!
 
-When you’re ready to deploy to production, create a minified bundle with `npm run build`.
-
 ## To use in production
 
 If you have a paid [News API](https://newsapi.org/) account and want to deploy __tidy news__ to a domain, running `npm run build` or `yarn build` will build the app for production to the `build` folder.
