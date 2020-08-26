@@ -5,7 +5,7 @@ import Nav from 'components/Nav/Nav.js';
 import Favorite from 'components/Favorite/Favorite.js';
 import Source from 'components/Source/Source.js';
 import Story from 'components/Story/Story.js';
-import 'components/App/App.css';
+import './App.css';
 
 function App() {
   const [stories, setStories] = useState([]);
