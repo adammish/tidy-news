@@ -7,41 +7,41 @@ function Nav(props) {
 
   useMountEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`https://newsapi.org/v2/sources?apiKey=${process.env.REACT_APP_NEWS_API_KEY}`);
+      const response = await axios.get(
+        `https://newsapi.org/v2/sources?apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+      );
       setSources(response.data.sources);
-    }
-    
+    };
+
     fetchData();
   }, []);
 
   const handleChange = (e) => {
     props.onChange(e.target.value);
-  }
-  
+  };
+
   return (
     <div className="Nav">
       <h1>tidy news</h1>
-      <p>News source: </p> 
+      <p>News source: </p>
       <div className="select">
-        <select
-          aria-label="News source"
-          onChange={handleChange}
-          value={props.sourceId}>
-          {sources.map(source =>
-          <option value={source.id} key={source.id}>
-            {source.name}
-          </option>
-          )}
+        <select aria-label="News source" onChange={handleChange} value={props.sourceId}>
+          {sources.map((source) => (
+            <option value={source.id} key={source.id}>
+              {source.name}
+            </option>
+          ))}
         </select>
       </div>
       <div className="NavImgToggle">
-        <p>Show images when available: </p> 
+        <p>Show images when available: </p>
         <label className="toggle">
-          <input 
+          <input
             type="checkbox"
             aria-label="Show images when available"
             defaultChecked={props.showImages}
-            onChange={props.imageToggle} />
+            onChange={props.imageToggle}
+          />
           <span className="Slider"></span>
         </label>
       </div>
@@ -49,6 +49,6 @@ function Nav(props) {
   );
 }
 
-const useMountEffect = (fun) => useEffect(fun, [])
+const useMountEffect = (fun) => useEffect(fun, []);
 
 export default Nav;

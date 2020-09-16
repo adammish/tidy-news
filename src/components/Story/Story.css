@@ -4,8 +4,8 @@
   background-color: var(--color-card);
   border-radius: 20px;
   border: 1px solid transparent;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  transition: transform .2s ease-in-out; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: transform 0.2s ease-in-out;
 }
 
 @media (max-width: 767.99px) {
@@ -14,7 +14,7 @@
   }
 }
 
-a.Story{
+a.Story {
   margin-bottom: 30px;
   color: var(--color-default);
   text-decoration: none;
@@ -23,7 +23,7 @@ a.Story{
 a.Story:hover,
 a.Story:focus {
   border: 1px solid var(--color-primary);
-  transform: scale(1.01); 
+  transform: scale(1.01);
 }
 
 .Story h2 {

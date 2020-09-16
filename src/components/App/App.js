@@ -14,63 +14,65 @@ function App() {
   const [sourceId, setSourceId] = useState(cookies.sourceId || 'google-news');
   const [sourceName, setSourceName] = useState(cookies.sourceName || 'Google News');
   const [showImages, setShowImages] = useState(cookies.showImages || false);
-  
+
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`http://newsapi.org/v2/top-headlines?sources=${sourceId}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`);
+      const response = await axios.get(
+        `http://newsapi.org/v2/top-headlines?sources=${sourceId}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+      );
       setStories(response.data.articles);
       setSourceId(response.data.articles[0].source.id);
       setSourceName(response.data.articles[0].source.name);
       setCookie('sourceId', sourceId, { path: '/', maxAge: 86400 * 30 });
       setCookie('sourceName', sourceName, { path: '/', maxAge: 86400 * 30 });
-    }
-    
+    };
+
     fetchData();
   }, [sourceId, sourceName, setCookie]);
-  
+
   const handleChange = (newSource) => {
     setSourceId(newSource);
-  }
+  };
 
   const imageToggle = () => {
     setShowImages(!showImages);
-    setCookie ('showImages', !showImages, { path: '/', maxAge: 86400 * 30});
-  }
-  
+    setCookie('showImages', !showImages, { path: '/', maxAge: 86400 * 30 });
+  };
+
   const toggleFavorites = () => {
     let newFavs = [];
 
-    if (favorites.some(fav => fav.id === sourceId)) {
-      newFavs = favorites.filter(item => item.id !== sourceId);
+    if (favorites.some((fav) => fav.id === sourceId)) {
+      newFavs = favorites.filter((item) => item.id !== sourceId);
     } else {
       newFavs = favorites.concat({
         id: sourceId,
-        name: sourceName
+        name: sourceName,
       });
     }
-      setFavorites(newFavs);
-      setCookie('favorites', newFavs, { path: '/', maxAge: 86400 * 30 });
-  }
+    setFavorites(newFavs);
+    setCookie('favorites', newFavs, { path: '/', maxAge: 86400 * 30 });
+  };
 
   return (
     <div className="App">
       <div className="top">
-        <Nav 
+        <Nav
           sourceId={sourceId}
           sourceName={sourceName}
           onChange={handleChange}
           showImages={showImages}
-          imageToggle={imageToggle} />  
+          imageToggle={imageToggle}
+        />
         <Favorite favorites={favorites} onClick={handleChange} />
       </div>
       <Source
         sourceId={sourceId}
         sourceName={sourceName}
         favorites={favorites}
-        toggleFavorites={toggleFavorites} />
-      <Story
-        stories={stories}
-        showImages={showImages} />
+        toggleFavorites={toggleFavorites}
+      />
+      <Story stories={stories} showImages={showImages} />
     </div>
   );
 }
