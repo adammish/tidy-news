@@ -13,7 +13,7 @@ function App() {
   const [favorites, setFavorites] = useState(cookies.favorites || []);
   const [sourceId, setSourceId] = useState(cookies.sourceId || 'google-news');
   const [sourceName, setSourceName] = useState(cookies.sourceName || 'Google News');
-  const [showImages, setShowImages] = useState(cookies.showImages || false);
+  const [showImages, setShowImages] = useState(cookies.showImages === 'true' || false);
 
   useEffect(() => {
     const fetchData = async () => {
