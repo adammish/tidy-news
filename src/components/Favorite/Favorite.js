@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Favorite.css';
 
 function Favorite(props) {
@@ -21,5 +22,10 @@ function Favorite(props) {
     </div>
   );
 }
+
+Favorite.propTypes = {
+  favorites: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Favorite;

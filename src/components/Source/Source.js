@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Source.css';
 
 function Source(props) {
@@ -13,5 +14,12 @@ function Source(props) {
     </div>
   );
 }
+
+Source.propTypes = {
+  sourceId: PropTypes.string.isRequired,
+  sourceName: PropTypes.string.isRequired,
+  favorites: PropTypes.array.isRequired,
+  toggleFavorites: PropTypes.func.isRequired,
+};
 
 export default Source;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Story.css';
 
 function Story(props) {
@@ -20,5 +21,10 @@ function Story(props) {
     </div>
   );
 }
+
+Story.propTypes = {
+  stories: PropTypes.array.isRequired,
+  showImages: PropTypes.bool.isRequired,
+};
 
 export default Story;

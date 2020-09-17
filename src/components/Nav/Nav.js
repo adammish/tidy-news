@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import './Nav.css';
 
@@ -48,6 +49,14 @@ function Nav(props) {
     </div>
   );
 }
+
+Nav.propTypes = {
+  sourceId: PropTypes.string.isRequired,
+  sourceName: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  showImages: PropTypes.bool.isRequired,
+  imageToggle: PropTypes.func.isRequired,
+};
 
 const useMountEffect = (fun) => useEffect(fun, []);
 
